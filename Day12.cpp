@@ -7,6 +7,9 @@ using namespace std;
 */
 //Pop is costly
 
+Linked list implementation of queues
+//Dynamic queue
+
 class Deque
 {	
     int *arr;
