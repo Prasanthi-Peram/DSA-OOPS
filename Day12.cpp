@@ -7,8 +7,85 @@ using namespace std;
 */
 //Pop is costly
 
-Linked list implementation of queues
+//Linked list implementation of queues
 //Dynamic queue
+O(1) only for adding element not O(n)
+#include <bits/stdc++.h>
+using namespace std;
+
+class node{
+    public:
+    int data;
+    node* next;
+
+    node(int val){
+        data=val;
+        next=NULL;
+    }
+};
+
+class queue{
+    node* front;
+    node* back;
+
+    public:
+    queue(){
+        front=NULL;
+        back=NULL;
+    }
+    void push(int x){
+        node* n= new node(x);
+       
+
+
+        if(front==NULL){
+            back=n;
+            front=n;
+        }
+        back->next=n;
+    }
+
+    void pop(){
+        if(front==NULL){
+            cout<<"Queue underflow"<<endl;
+            return;
+        }
+        node* todelete=front;
+        front=front->next;
+
+        delete todelete;
+        
+    }
+    int peek(){
+        if(front==NULL){
+            cout<<"No"<<endl;
+            return;
+        }
+
+        return front->data;
+    }
+
+    bool empty(){
+        if(front==NULL) return true;
+        return false;
+    }
+};
+
+class node{
+    public:
+    int data;
+    node* next;
+
+    node(int val){
+        data=val;
+        next=NULL;
+    }
+};
+
+class queue{
+    node* front;
+    node* back;
+}
 
 class Deque
 {	
