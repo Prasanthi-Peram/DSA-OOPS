@@ -32,9 +32,11 @@ void reverse(stack<int> &st){
 
 /*void reverseSentence(string s){
     stack<string> st;
+    We use a for loop and a while it means that we want to reverse words and not letters and when space is encountered it is another stack element
+    
     for(int i=0;i<s.length();i++){
         string word="";
-        while(s[i]!=' '&& i<s.length()){
+        while(s[i]!=' '&& i<s.length()){ If I don't include the first condition it means that the whole string is copied to word. so st.top is the word itself.
             word+=s[i];
             i++;
         }
@@ -73,11 +75,11 @@ int main(){
 public:
     Mystack() {
         arr = new int[n];
-        top = -1;
+        top = -1;//Initially the top pointer is outside
     }
 
     void push(int x) {
-        if (top == n - 1) {
+        if (top == n - 1) {//Top pointer iterates from 0 to n-1
             cout << "Stack overflow" << endl;
             return;
         }
