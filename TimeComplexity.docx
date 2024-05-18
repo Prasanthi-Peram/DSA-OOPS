@@ -1,0 +1,17 @@
+Time Complexity:
+-No. of basic operations such as +-*/, comparision, logical operators,assignment, accessing elements function calls are all counted for calculating time complexity.
+
+
+• Mathematical formulas that just calculate an answer: O(1)
+• Unordered set/map: O(1) per operation
+• Binary search: O(log n)
+• Ordered set/map or priority queue: O(log n) per operation
+• Prime factorization of an integer, or checking primality or compositeness of an integer:O(√n)
+• Reading in n items of input: O(n)
+• Iterating through an array or a list of n elements: O(n)
+• Sorting: usually O(n log n) for default sorting algorithms (mergesort and quicksort used in std::sort())
+• Iterating through all subsets of size k of the input elements: O(pow(n,k))
+For example, iterating through all triplets is O(pow(n,3)).
+• Iterating through all subsets: O(pow(2,n))
+• Iterating through all permutations: O(n!)
+
