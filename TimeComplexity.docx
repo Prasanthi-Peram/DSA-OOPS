@@ -15,3 +15,4 @@ For example, iterating through all triplets is O(pow(n,3)).
 • Iterating through all subsets: O(pow(2,n))
 • Iterating through all permutations: O(n!)
 
+
