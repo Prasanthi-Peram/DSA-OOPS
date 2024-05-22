@@ -73,7 +73,7 @@ int main(){
 
 //Rat in a maze
 //Backtracking is an algorithmic-technique for solving recursive problems by trying to build every possible solution incrementally and removing those solutions that fail to satisfy the constraints of the problem at any point of time
-bool isSafe(int **arr,int x,int y,int n){
+/*bool isSafe(int **arr,int x,int y,int n){
     if(x<n && y<n && arr[x][y]==1){
         return true;
     }
@@ -126,4 +126,18 @@ int main(){
         }
     }
     return 0;
-}
+}*/
+
+//Combinatorial sum by backtracking
+/*int main(){
+    //1. Return all possible pairs 2. You don't know the input size-->use dynamic arrays
+
+    vector<int> arr;
+    int num=0;
+
+    while(num!=)
+
+
+    
+    return 0;
+}*/

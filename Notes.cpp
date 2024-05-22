@@ -202,3 +202,107 @@ return 0;
 //
 
 //Graphs 
+
+//Hashing
+/*Insertion/deletion/search O(1)..ll((O(n))..bst(O(logn)))-->Good T.C.
+1. mode for(int i=0;i<s.length();i++){
+    char ch=s[i];
+    count[ch-'a']++;
+
+2. max. occuring word //map <node(key),int(value)> m
+
+Implementation:
+Ordered map-->O(logn)
+UnOrdered map-->O(1)
+}*/
+
+/*int main(){
+    unordered_map<string,int> m;
+
+    //insertion
+    pair<string,int> p=make_pair("apple",3);
+    m.insert(p);
+
+    //2
+    pair<string,int> p2("orange",2);
+    m.insert(p2);
+
+    //3
+    m["mango"]=5;
+    m["mango"]=4; //Updation-->unique keys
+
+
+    //Searching
+    cout<<m["mango"]<<endl;
+    cout<<m.at("mango")<<endl;
+
+    //If first accessed: 1-->0, 2---> key not found.. if for the second time you use at then output is 0.
+
+    /*m.size()
+    m.erase("mango")*/
+
+    //Accessing and iteration*/
+
+    /*for(auto i: m){
+        cout<<i.first<<" "<<i.second<<endl;
+    }
+
+    unordered_map<string,int> :: iterator it;
+    for(it=m.begin();it!=m.end();it++){
+        cout<< it->first<<" "<<it->second<<endl;
+    }
+
+//If unordered_map is replaced by map then elements are printed in the order they were added
+
+m.clear();//Size is returned as zero
+
+/*Creating and Initializing:
+
+unordered_map<K, V> hashMap;
+unordered_map<K, V> hashMap = {{"key1", value1}, {"key2", value2}};
+
+Inserting Elements:
+
+hashMap[key] = value;
+hashMap.insert({key, value});
+hashMap.emplace(key, value);
+
+Accessing Elements:
+
+hashMap[key];
+hashMap.at(key);
+
+Checking for Elements:
+
+
+hashMap.find(key) != hashMap.end();
+hashMap.count(key);
+
+Removing Elements:
+
+hashMap.erase(key);
+hashMap.erase(iterator);
+ auto it = hashMap.find("apple");
+    if (it != hashMap.end()) {//If equal it means 
+        hashMap.erase(it);
+    }
+
+Iterating:
+
+for (const auto &pair : hashMap)
+for (const auto &pair : hashMap) {
+        cout << pair.first << ": " << pair.second << endl;
+    }
+for (auto it = hashMap.begin(); it != hashMap.end(); ++it)
+
+Other Operations:
+
+hashMap.size();
+hashMap.empty();
+hashMap.clear();
+*/
+    //return 0;
+//}
+
+
+//
