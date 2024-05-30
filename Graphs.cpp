@@ -158,4 +158,165 @@ int main()
     return 0;
 }*/
 
-//DFS
+//DFS using recursion
+
+// Function to perform DFS on a graph
+void dfs(vector<vector<int>>& adjList, int node, vector<bool>& visited) {
+    // Mark the current node as visited
+    visited[node] = true;
+    cout << node << " ";
+
+    // Explore all unvisited neighbors
+    for (int neighbor : adjList[node]) {
+        if (!visited[neighbor]) {
+            dfs(adjList, neighbor, visited);
+        }
+    }
+}
+
+int main() {
+    // Number of vertices in the graph
+    int vertices = 5;
+
+    // Adjacency list representation of the graph
+    vector<vector<int>> adjList(vertices);
+
+    // Add edges to the graph
+    adjList[0].push_back(1);
+    adjList[0].push_back(2);
+    adjList[1].push_back(3);
+    adjList[1].push_back(4);
+    adjList[2].push_back(4);
+
+    // Vector to keep track of visited nodes
+    vector<bool> visited(vertices, false);
+
+    // Perform DFS starting from vertex 0
+    cout << "Depth First Traversal starting from vertex 0: ";
+    dfs(adjList, 0, visited);
+
+    return 0;
+}
+
+//DFS using stack
+#include <iostream>
+#include <vector>
+#include <stack>
+
+using namespace std;
+
+// Function to perform DFS on a graph using a stack
+void dfs(vector<vector<int>>& adjList, int startNode, vector<bool>& visited) {
+    // Create a stack for DFS
+    stack<int> stk;
+
+    // Push the start node onto the stack and mark it as visited
+    stk.push(startNode);
+    visited[startNode] = true;
+
+    while (!stk.empty()) {
+        // Pop a vertex from the stack and print it
+        int currentNode = stk.top();
+        stk.pop();
+        cout << currentNode << " ";
+
+        // Get all adjacent vertices of the popped vertex
+        // If an adjacent vertex has not been visited, then push it onto the stack and mark it as visited
+        for (int neighbor : adjList[currentNode]) {
+            if (!visited[neighbor]) {
+                stk.push(neighbor);
+                visited[neighbor] = true;
+            }
+        }
+    }
+}
+
+int main() {
+    // Number of vertices in the graph
+    int vertices = 5;
+
+    // Adjacency list representation of the graph
+    vector<vector<int>> adjList(vertices);
+
+    // Add edges to the graph
+    adjList[0].push_back(1);
+    adjList[0].push_back(2);
+    adjList[1].push_back(3);
+    adjList[1].push_back(4);
+    adjList[2].push_back(4);
+
+    // Vector to keep track of visited nodes
+    vector<bool> visited(vertices, false);
+
+    // Perform DFS starting from vertex 0
+    cout << "Depth First Traversal starting from vertex 0: ";
+    dfs(adjList, 0, visited);
+
+    return 0;
+}
+
+//DFS 
+// C++ program to print DFS traversal from
+// a given vertex in a given graph
+#include <bits/stdc++.h>
+using namespace std;
+
+// Graph class represents a directed graph
+// using adjacency list representation
+class Graph {
+public:
+	map<int, bool> visited;
+	map<int, list<int> > adj;
+
+	// Function to add an edge to graph
+	void addEdge(int v, int w);
+
+	// DFS traversal of the vertices
+	// reachable from v
+	void DFS(int v);
+};
+
+void Graph::addEdge(int v, int w)
+{
+	// Add w to v’s list.
+	adj[v].push_back(w);
+}
+
+void Graph::DFS(int v)
+{
+	// Mark the current node as visited and
+	// print it
+	visited[v] = true;
+	cout << v << " ";
+
+	// Recur for all the vertices adjacent
+	// to this vertex
+	list<int>::iterator i;
+	for (i = adj[v].begin(); i != adj[v].end(); ++i)
+		if (!visited[*i])
+			DFS(*i);
+}
+
+// Driver code
+int main()
+{
+	// Create a graph given in the above diagram
+	Graph g;
+	g.addEdge(0, 1);
+	g.addEdge(0, 2);
+	g.addEdge(1, 2);
+	g.addEdge(2, 0);
+	g.addEdge(2, 3);
+	g.addEdge(3, 3);
+
+	cout << "Following is Depth First Traversal"
+			" (starting from vertex 2) \n";
+
+	// Function call
+	g.DFS(2);
+
+	return 0;
+}
+
+
+
