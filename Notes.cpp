@@ -31,6 +31,17 @@ filled. The size of the vector gets doubled each time when they get filled.*/
     for(auto element:v) cout<<element<<" ";
     cout<<endl;
 
+void resize(int newSize) {
+        v.resize(newSize);
+    }
+void deleteElement(int index) {
+        v.erase(v.begin() + index);
+    }
+
+void insert(int index, int value) {
+        v.insert(v.begin() + index, value);
+    }
+
     return 0;
 }*/
 
