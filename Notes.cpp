@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-/*Vectors are dynamic arrays. They have the ability to resize itself when it gets
-filled. The size of the vector gets doubled each time when they get filled.*/
-/*int main(){
+Vectors are dynamic arrays. They have the ability to resize itself when it gets
+filled. The size of the vector gets doubled each time when they get filled.
+int main(){
     vector<int> v;
     v.push_back(1);
     v.push_back(2);
@@ -43,7 +43,7 @@ void insert(int index, int value) {
     }
 
     return 0;
-}*/
+}
 
 
 //Pairs
