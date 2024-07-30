@@ -115,6 +115,39 @@ node* reverseRecursive(node *&head){
     return newhead;
 }
 
+// Deletion of a particular node can be done by position/value:
+void Delete(Node *&head, int position)
+{
+
+    if (position == 1)
+    {
+        Node *temp = head;
+        head = head->nxt;
+
+        temp->nxt = NULL;
+        delete temp;
+    }
+
+    else
+    {
+        Node *curr = head;
+        Node *prev = NULL;
+
+        int cnt = 1;
+        while (cnt < position)
+        {
+            prev = curr;
+            curr = curr->nxt;
+            cnt++;
+        }
+
+        prev->nxt = curr->nxt;
+        curr->nxt = NULL;
+
+        delete curr;
+    }
+}
+
 //deletion in a linked list
 void deletion(node *&head,int val){
     if(head==NULL) return;
