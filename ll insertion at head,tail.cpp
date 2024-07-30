@@ -29,6 +29,34 @@ void insertattail(node *&head,int val){
     }
     temp->next=n;
 }
+
+void InsertAtNode(Node *&head, int position, int val)
+{
+    Node *temp = head;
+    if (position == 1)
+    {
+        InsertAtHead(head, val);
+        return;
+    }
+
+    Node *n = new Node(val);
+    int count = 1;
+    while (count < position - 1)
+    {
+        temp = temp->nxt;
+        count++;
+    }
+    if (temp->nxt == NULL)
+    {
+        InsertAtTail(head, val);
+        return;
+    }
+    else
+    {
+        n->nxt = temp->nxt;
+        temp->nxt = n;
+    }
+}
 void display(node *head){
     node *temp=head;//starting traversal from head with head remaining unchanged
     while(temp!=NULL){
