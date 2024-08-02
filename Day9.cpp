@@ -68,7 +68,7 @@ int main(){
 //Reversing a sentence using stack
 
 
-/*class Mystack {
+class Mystack {
     int *arr;
     int top;
 
