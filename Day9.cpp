@@ -30,7 +30,7 @@ void reverse(stack<int> &st){
 
 }*/
 
-/*void reverseSentence(string s){
+void reverseSentence(string s){
     stack<string> st;
     We use a for loop and a while it means that we want to reverse words and not letters and when space is encountered it is another stack element
     
@@ -47,7 +47,7 @@ void reverse(stack<int> &st){
             st.pop();
         }
     cout<<endl;
-}*/
+}
 //#define n 100
 int main(){
     /*stack<int> st;
