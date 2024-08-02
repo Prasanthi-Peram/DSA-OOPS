@@ -36,7 +36,7 @@ void reverseSentence(string s){
     
     for(int i=0;i<s.length();i++){
         string word="";
-        while(s[i]!=' '&& i<s.length()){ If I don't include the first condition it means that the whole string is copied to word. so st.top is the word itself.
+        while(s[i]!=' '&& i<s.length()){ /*If I don't include the first condition it means that the whole string is copied to word. so st.top is the word itself.*/
             word+=s[i];
             i++;
         }
