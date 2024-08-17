@@ -19,4 +19,4 @@ Feel free to explore and learn alongside me!
 - [Game Theory (Full Notes)](https://www.cs.cmu.edu/afs/cs/academic/class/15859-f01/www/notes/comb.pdf)
 
 ### Blogs:
--[Codeforces](https://codeforces.com/blog/entry/91363)
+- [Codeforces](https://codeforces.com/blog/entry/91363)
