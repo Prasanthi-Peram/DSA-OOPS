@@ -17,3 +17,6 @@ Feel free to explore and learn alongside me!
 - [DP Book](https://dp-book.com/Dynamic_Programming.pdf)
 - [Game Theory (Short Article)](https://www.topcoder.com/community/competitive-programming/tutorials/algorithm-games/)
 - [Game Theory (Full Notes)](https://www.cs.cmu.edu/afs/cs/academic/class/15859-f01/www/notes/comb.pdf)
+
+### Blogs:
+-[Codeforces](https://codeforces.com/blog/entry/91363)
